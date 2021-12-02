@@ -1,5 +1,5 @@
 # entregaFinalJLD
-Entrega del proyecto de DAM
+Entrega del proyecto de DAM a traves de git
 
 
 Importante 
