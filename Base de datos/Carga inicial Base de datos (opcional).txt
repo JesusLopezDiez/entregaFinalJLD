@@ -1,0 +1,59 @@
+Insert into usuarios (`usuario`,`contraseña`) values ('prueba','123456');
+
+INSERT INTO envios (`nenvio`,`cliente`,`cpOrigen`,`localidadOrigen`,`cpDestino`,`localidadDestino`,`destinatario`,`direccion`,`observaciones`,`peso`,`volumen`) 
+VALUES ('E20211201090750','prueba','28000','Madrid','33009','Oviedo','Paco','Las medulas 8','',2,2);
+INSERT INTO envios (`nenvio`,`cliente`,`cpOrigen`,`localidadOrigen`,`cpDestino`,`localidadDestino`,`destinatario`,`direccion`,`observaciones`,`peso`,`volumen`) 
+VALUES ('E20211201090751','prueba','28000','Madrid','33109','Aviles','Diego','Las menisas 8','',2,2);
+INSERT INTO envios (`nenvio`,`cliente`,`cpOrigen`,`localidadOrigen`,`cpDestino`,`localidadDestino`,`destinatario`,`direccion`,`observaciones`,`peso`,`volumen`) 
+VALUES ('E20211201090752','prueba','28000','Madrid','33209','Langreo','Diego','Comarcales 8','',2,2);
+INSERT INTO envios (`nenvio`,`cliente`,`cpOrigen`,`localidadOrigen`,`cpDestino`,`localidadDestino`,`destinatario`,`direccion`,`observaciones`,`peso`,`volumen`) 
+VALUES ('E20211201090753','prueba','28000','Madrid','33309','Ponga','Diego','Facundo Liberto 8','',2,2);
+INSERT INTO envios (`nenvio`,`cliente`,`cpOrigen`,`localidadOrigen`,`cpDestino`,`localidadDestino`,`destinatario`,`direccion`,`observaciones`,`peso`,`volumen`) 
+VALUES ('E20211201090754','prueba','28000','Madrid','33409','Gijon','Diego','Roncesvalles 8','',2,2);
+INSERT INTO envios(`nenvio`,`cliente`,`cpOrigen`,`localidadOrigen`,`cpDestino`,`localidadDestino`,`destinatario`,`direccion`,`observaciones`,`peso`,`volumen`) 
+VALUES ('E20211201090755','prueba','28000','Madrid','33509','Arriondas','Diego','Pico cerredo 8','',2,2);
+INSERT INTO envios (`nenvio`,`cliente`,`cpOrigen`,`localidadOrigen`,`cpDestino`,`localidadDestino`,`destinatario`,`direccion`,`observaciones`,`peso`,`volumen`) 
+VALUES ('E20211201090756','prueba','28000','Madrid','33609','Pola de Lena','Diego','Torre Santa 8','',2,2);
+INSERT INTO envios (`nenvio`,`cliente`,`cpOrigen`,`localidadOrigen`,`cpDestino`,`localidadDestino`,`destinatario`,`direccion`,`observaciones`,`peso`,`volumen`) 
+VALUES ('E20211201090757','prueba','28000','Madrid','33709','Mieres','Diego','Urbanova 8','',2,2);
+INSERT INTO envios (`nenvio`,`cliente`,`cpOrigen`,`localidadOrigen`,`cpDestino`,`localidadDestino`,`destinatario`,`direccion`,`observaciones`,`peso`,`volumen`) 
+VALUES ('E20211201090758','prueba','28000','Madrid','33809','Campomanes','Diego','Av Asturias 8','',2,2);
+INSERT INTO envios (`nenvio`,`cliente`,`cpOrigen`,`localidadOrigen`,`cpDestino`,`localidadDestino`,`destinatario`,`direccion`,`observaciones`,`peso`,`volumen`) 
+VALUES ('E20211201090759','prueba','28000','Madrid','33909','Siero','Diego','Avenida Galicia 8','',2,2);
+INSERT INTO envios (`nenvio`,`cliente`,`cpOrigen`,`localidadOrigen`,`cpDestino`,`localidadDestino`,`destinatario`,`direccion`,`observaciones`,`peso`,`volumen`) 
+VALUES ('E20211201090800','prueba','28000','Madrid','33000','Infiesto','Diego','Facunda 17 8','',2,2);
+
+
+INSERT INTO estados (`idestados`,`nenvio`,`estado`,`fecha`) 
+VALUES (1,'E20211201090750','Alta en el sistema','2021-12-01 09:07:50');
+INSERT INTO estados (`idestados`,`nenvio`,`estado`,`fecha`) 
+VALUES (2,'E20211201090751','Alta en el sistema','2021-12-01 09:07:50');
+INSERT INTO estados (`idestados`,`nenvio`,`estado`,`fecha`) 
+VALUES (3,'E20211201090752','Alta en el sistema','2021-12-01 09:07:50');
+INSERT INTO estados (`idestados`,`nenvio`,`estado`,`fecha`) 
+VALUES (4,'E20211201090753','Alta en el sistema','2021-12-01 09:07:50');
+INSERT INTO estados (`idestados`,`nenvio`,`estado`,`fecha`) 
+VALUES (5,'E20211201090754','Alta en el sistema','2021-12-01 09:07:50');
+INSERT INTO estados (`idestados`,`nenvio`,`estado`,`fecha`) 
+VALUES (6,'E20211201090755','Alta en el sistema','2021-12-01 09:07:50');
+INSERT INTO estados (`idestados`,`nenvio`,`estado`,`fecha`)  
+VALUES (7,'E20211201090756','Alta en el sistema','2021-12-01 09:07:50');
+INSERT INTO estados (`idestados`,`nenvio`,`estado`,`fecha`) 
+VALUES (8,'E20211201090757','Alta en el sistema','2021-12-01 09:07:50');
+INSERT INTO estados (`idestados`,`nenvio`,`estado`,`fecha`)  
+VALUES (9,'E20211201090758','Alta en el sistema','2021-12-01 09:07:50');
+INSERT INTO estados (`idestados`,`nenvio`,`estado`,`fecha`) 
+VALUES (10,'E20211201090759','Alta en el sistema','2021-12-01 09:07:50');
+INSERT INTO estados (`idestados`,`nenvio`,`estado`,`fecha`) 
+VALUES (11,'E20211201090800','Alta en el sistema','2021-12-01 09:07:50');
+
+INSERT INTO furgonetas (`idfurgoneta`,`matricula`,`rutadesde`,`rutahasta`,`fechaAlta`,`fechaBaja`) 
+VALUES (1,'1111aaa','33000','33500','2021-12-01 09:07:50',null);
+INSERT INTO furgonetas (`idfurgoneta`,`matricula`,`rutadesde`,`rutahasta`,`fechaAlta`,`fechaBaja`) 
+VALUES (2,'1111bbb','33500','33999','2021-12-01 09:07:50',null);
+INSERT INTO furgonetas (`idfurgoneta`,`matricula`,`rutadesde`,`rutahasta`,`fechaAlta`,`fechaBaja`) 
+VALUES (3,'1111ccc','33000','33100','2021-12-01 09:07:50',null);
+INSERT INTO furgonetas (`idfurgoneta`,`matricula`,`rutadesde`,`rutahasta`,`fechaAlta`,`fechaBaja`) 
+VALUES (4,'1111ddd','33100','33200','2021-12-01 09:07:50',null);
+INSERT INTO furgonetas (`idfurgoneta`,`matricula`,`rutadesde`,`rutahasta`,`fechaAlta`,`fechaBaja`) 
+VALUES (5,'1111eee','33200','33300','2021-12-01 09:07:50',null);
