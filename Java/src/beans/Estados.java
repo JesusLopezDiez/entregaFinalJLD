@@ -54,7 +54,7 @@ public class Estados {
 
 	@Override
 	public String toString() {
-		return "Nº envio= " + nenvio + ", Estado: " + estado + ", " + fecha + "\n";
+		return " Nº envio= " + nenvio + ", Estado: " + estado + ", " + fecha + "\n";
 	}
 	
 	

@@ -23,7 +23,8 @@ CREATE TABLE asturexpress.estados (
 idestados numeric PRIMARY KEY NOT NULL,
 nenvio varchar(15) NOT NULL,
 estado varchar(200)NOT NULL,
-fecha datetime NOT NULL
+fecha datetime NOT NULL,
+FOREIGN KEY (nenvio) REFERENCES envios(nenvio)
 ); 
 
 
@@ -39,7 +40,9 @@ fechaBaja datetime
 CREATE TABLE asturexpress.cargafurgonetas (
 idcarga numeric PRIMARY KEY NOT NULL,
 nenvio varchar(15) NOT NULL,
-idfurgoneta varchar(7) NOT NULL,
+idfurgoneta numeric NOT NULL,
 fechaAlta datetime NOT NULL,
-fechaBaja datetime 
-); 
+fechaBaja datetime ,
+FOREIGN KEY (nenvio) REFERENCES envios(nenvio),
+FOREIGN KEY (idfurgoneta) REFERENCES furgonetas(idfurgoneta)
+);

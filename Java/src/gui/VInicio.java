@@ -1,7 +1,7 @@
 package gui;
 
 
-// version 1.9
+// version 1.10
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -256,7 +256,7 @@ public class VInicio extends JFrame {
 			});
 			entrada.setToolTipText("Introduzca el numero de envio");
 			entrada.setFont(new Font("Tahoma", Font.BOLD, 13));
-			entrada.setBounds(75, 146, 264, 31);
+			entrada.setBounds(44, 139, 264, 31);
 			entrada.setColumns(10);
 		}
 		return entrada;
@@ -265,12 +265,13 @@ public class VInicio extends JFrame {
 	private JTextArea getTexto() {
 		if (texto == null) {
 			texto = new JTextArea();
+			texto.setFont(new Font("Monospaced", Font.BOLD, 14));
 			texto.setWrapStyleWord(true);
 			texto.setLineWrap(true);
 			texto.setEditable(false);
 			texto.setBackground(UIManager.getColor("Button.background"));
 			texto.setBorder(new LineBorder(new Color(0, 0, 0), 2));
-			texto.setBounds(75, 220, 611, 200);
+			texto.setBounds(44, 220, 704, 200);
 
 		}
 		return texto;
@@ -301,7 +302,7 @@ public class VInicio extends JFrame {
 
 				}
 			});
-			Buscar.setBounds(369, 145, 174, 31);
+			Buscar.setBounds(328, 138, 174, 31);
 		}
 		return Buscar;
 	}
@@ -1629,7 +1630,7 @@ public class VInicio extends JFrame {
 		if (lblSeguimiento == null) {
 			lblSeguimiento = new JLabel("Numero de envio:");
 			lblSeguimiento.setFont(new Font("Tahoma", Font.PLAIN, 14));
-			lblSeguimiento.setBounds(75, 118, 144, 26);
+			lblSeguimiento.setBounds(50, 113, 144, 26);
 		}
 		return lblSeguimiento;
 	}
@@ -1638,7 +1639,7 @@ public class VInicio extends JFrame {
 		if (lblSeguimientoEstados == null) {
 			lblSeguimientoEstados = new JLabel("Estados del envio:");
 			lblSeguimientoEstados.setFont(new Font("Tahoma", Font.PLAIN, 14));
-			lblSeguimientoEstados.setBounds(75, 188, 174, 31);
+			lblSeguimientoEstados.setBounds(44, 189, 174, 31);
 		}
 		return lblSeguimientoEstados;
 	}
