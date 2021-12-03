@@ -160,16 +160,16 @@ public class VentanaLogin extends JFrame {
 					if (con.length() < 6) {
 						respuesta.setText("La contraseña tiene que tener al menos 6 caracteres");
 					} else {
-						boolean comprobacion = sl.comprobar(usuario.getText(), con);
+						String comprobacion = sl.comprobar(usuario.getText(), con);
 
-						if (comprobacion) {
+						if ("OK".equals(comprobacion)) {
 							
 							VInicio va = new VInicio(usuario.getText());
 							va.setVisible(true);
 							dispose();
 							
 						} else {
-							respuesta.setText("usuario o pass incorrecto");
+							respuesta.setText(comprobacion);
 						}
 					}
 

@@ -43,7 +43,7 @@ public class ServiceLogin {
 
 	}
 	
-	public boolean comprobar(String user, String pass) {
+	public String comprobar(String user, String pass) {
 
 		Usuario existente = null;
 		try {
@@ -51,16 +51,16 @@ public class ServiceLogin {
 		} catch (SQLException e) {
 
 			e.printStackTrace();
-			return false;
+			return "Error Base de datos";
 		}
 
 		if (existente != null) {
 			
-					return true;
+					return "OK";
 				}
 			 
 		
-			return false;
+			return "Usuario o pass incorrectos";
 		
 
 	}
