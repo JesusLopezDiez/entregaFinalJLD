@@ -110,7 +110,7 @@ public class VIncidenciaD extends JDialog {
 			comboBox = new JComboBox();
 			comboBox.setToolTipText("Selecciona una incidencia");
 			comboBox.setFont(new Font("Tahoma", Font.PLAIN, 14));
-			comboBox.setModel(new DefaultComboBoxModel(new String[] {"Lectura en delegacion origen", "En transito desde el origen", "Lectura en delegacion Intermedia", "En transito hacia el destino", "En delegacion de destino", "En reparto", "Entregado", ""}));
+			comboBox.setModel(new DefaultComboBoxModel(new String[] {"Lectura en delegacion origen", "En transito desde el origen", "Lectura delegacion Intermedia", "En transito hacia el destino", "En delegacion de destino", "En reparto", "Entregado", ""}));
 			comboBox.setBounds(24, 87, 346, 32);
 		}
 		return comboBox;

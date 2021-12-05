@@ -20,7 +20,7 @@ public class ServicePrincipal {
 
 	public List<Estados> historico(String nenvio) {
 
-		List<Estados> estados = new ArrayList();
+		List<Estados> estados = new ArrayList<Estados>();
 
 		try {
 			estados = eDao.buscar(nenvio);
@@ -32,7 +32,7 @@ public class ServicePrincipal {
 
 	public String altaEstado(String estado, String nenvio,String origen) {
 
-		List<Estados> estados = new ArrayList();
+		List<Estados> estados = new ArrayList<Estados>();
 		estados = historico(nenvio);
 		int respuesta = 0;
 
@@ -45,7 +45,7 @@ public class ServicePrincipal {
 		List<String> envios = enviosEnFurgonetas();
 		
 		for (String de: envios) {
-			if(de.equals(nenvio) && !origen.equals("Clasificador")) {
+			if(de.equals(nenvio) && !origen.equals("Clasificador") && estado.equals("Entregado") ) {
 				return "No puedes entregar un paquete sin bajarlo de la furgoneta";
 			}
 		}
@@ -111,7 +111,7 @@ public class ServicePrincipal {
 
 	public String EliminarFurgoneta(String matricula) {
 
-		String salida;
+		
 		int funciono = 0;
 
 		try {
@@ -134,7 +134,7 @@ public class ServicePrincipal {
 
 		Furgonetas f = new Furgonetas(null, matricula, desde, hasta, null, null);
 
-		String salida;
+		
 		int funciono = 0;
 
 		Furgonetas f2 = buscarFurgoneta(matricula);
@@ -161,7 +161,7 @@ public class ServicePrincipal {
 
 	public String EliminarCarga(int id, String nenvio) {
 
-		String salida;
+		
 		int funciono = 0;
 
 		try {
@@ -171,7 +171,7 @@ public class ServicePrincipal {
 			return "Error en la base de datos";
 		}
 		if (funciono != 0) {
-			altaEstado(nenvio,"Envio bajado de la furgoneta","PDA");
+			altaEstado("Envio bajado de furgoneta",nenvio,"PDA");
 			return "Mercancia dada de baja";
 		}
 
@@ -183,7 +183,7 @@ public class ServicePrincipal {
 
 	public String ModificarFurgoneta(String matricula, String desde, String hasta) {
 
-		String salida;
+		
 		int funciono = 0;
 
 		try {
@@ -204,7 +204,7 @@ public class ServicePrincipal {
 
 	public List<DatosEnvio> buscarTodosEnvios() {
 
-		List<DatosEnvio> salida = new ArrayList();
+		List<DatosEnvio> salida = new ArrayList<DatosEnvio>();
 
 		try {
 			salida = deDao.sacarTodos();
@@ -218,7 +218,7 @@ public class ServicePrincipal {
 	
 	public List<String> enviosEnFurgonetas() {
 
-		List<String> salida = new ArrayList();
+		List<String> salida = new ArrayList<String>();
 
 		try {
 			salida = fuDao.enviosEnFurgonetas();
@@ -232,7 +232,7 @@ public class ServicePrincipal {
 
 	public List<Furgonetas> clasificar(String cp) {
 
-		List<Furgonetas> salida = new ArrayList();
+		List<Furgonetas> salida = new ArrayList<Furgonetas>();
 
 		try {
 			salida = fuDao.clasificar(cp);
@@ -256,7 +256,7 @@ public class ServicePrincipal {
 			return "Error en la base de datos";
 		}
 		if (resultado != 0) {
-			altaEstado("Envio añadido en furgoneta: Identificador: "+id,nenvio,"Clasificador");
+			altaEstado("Envio añadido a furgoneta: "+id,nenvio,"Clasificador");
 			return "OK Carga añadida correctamente";
 		}
 		else{

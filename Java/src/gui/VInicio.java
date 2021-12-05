@@ -1540,6 +1540,7 @@ public class VInicio extends JFrame {
 				public void actionPerformed(ActionEvent e) {
 					int seleccionado = comboClasificarEnvios.getSelectedIndex();
 					furgonetasPermitidas = sp.clasificar(sacarTodosEnvios.get(seleccionado).getCpDestino());
+					comboBoxFurgonetasPermitidas.removeAllItems();
 
 					if (!furgonetasPermitidas.isEmpty()) {
 						for (int i = 0; i < furgonetasPermitidas.size(); i++) {

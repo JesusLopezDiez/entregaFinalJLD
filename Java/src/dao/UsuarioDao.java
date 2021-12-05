@@ -8,7 +8,6 @@ import java.sql.ResultSet;
 
 import beans.Usuario;
 import conexion.Conexion;
-import java.io.IOException;
 import java.sql.SQLException;
 import java.sql.Statement;
 import daoI.UsuarioDaoI;

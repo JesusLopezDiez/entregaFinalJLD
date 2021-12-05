@@ -1,12 +1,9 @@
 package service;
 
-import java.sql.Connection;
 import java.sql.SQLException;
 
 import beans.Usuario;
-import conexion.Conexion;
 import dao.UsuarioDao;
-import daoI.UsuarioDaoI;
 
 public class ServiceLogin {
 

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import beans.CargaFurgonetas;
-import beans.Estados;
+
 import beans.Furgonetas;
 import conexion.Conexion;
 import daoI.FurgonetasDaoI;
@@ -20,7 +20,6 @@ public class FurgonetasDao implements FurgonetasDaoI {
 
 		Connection c = Conexion.obtenerConexion();
 		Furgonetas salida = null ;
-		List<CargaFurgonetas> salidalista = null;
 		Statement st = c.createStatement();
 		ResultSet result = st.executeQuery("select * from furgonetas where matricula = '" + matricula + "' ;");
 
@@ -46,7 +45,7 @@ public class FurgonetasDao implements FurgonetasDaoI {
 	public List<CargaFurgonetas> sacarCarga(int id) throws SQLException {
 
 		Connection c = Conexion.obtenerConexion();
-		List<CargaFurgonetas> salidalista = new ArrayList();
+		List<CargaFurgonetas> salidalista = new ArrayList<CargaFurgonetas>();
 		Statement st = c.createStatement();
 		ResultSet result = st.executeQuery(
 				"select * from cargafurgonetas where idfurgoneta = " + id + " and fechaBaja is null ;");
@@ -159,7 +158,7 @@ public class FurgonetasDao implements FurgonetasDaoI {
 
 		Connection c = Conexion.obtenerConexion();
 		Furgonetas salida = null;
-		List<Furgonetas> salidalista = new ArrayList();
+		List<Furgonetas> salidalista = new ArrayList<Furgonetas>();
 		Statement st = c.createStatement();
 		ResultSet result = st.executeQuery("select * from furgonetas where rutadesde<= '" + cpDestino + "'and rutahasta>='"
 				+ cpDestino + "' and fechaBaja is null ");
@@ -183,7 +182,7 @@ public class FurgonetasDao implements FurgonetasDaoI {
 	public List<String> enviosEnFurgonetas() throws SQLException{
 		Connection c = Conexion.obtenerConexion();
 		
-		List<String> salidalista = new ArrayList();
+		List<String> salidalista = new ArrayList<String>();
 		Statement st = c.createStatement();
 		ResultSet result = st.executeQuery("select nenvio from cargafurgonetas where fechaBaja is null");
 

@@ -7,18 +7,15 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 
 import beans.DatosEnvio;
-import beans.Estados;
-import beans.Usuario;
+
 import conexion.Conexion;
-import java.io.IOException;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 import daoI.DatosEnvioDaoI;
-import daoI.EstadosDaoI;
-import daoI.UsuarioDaoI;
+
 
 public class DatosEnvioDao implements DatosEnvioDaoI{
 	
@@ -81,7 +78,7 @@ public class DatosEnvioDao implements DatosEnvioDaoI{
 		
 		Connection c = Conexion.obtenerConexion();
 		DatosEnvio salida;
-		List<DatosEnvio> salidalista = new ArrayList();
+		List<DatosEnvio> salidalista = new ArrayList<DatosEnvio>();
 		Statement st = c.createStatement();
 		ResultSet result = st.executeQuery("select * from envios where nenvio not in (select nenvio from estados where estado='Entregado')"
 				+ "and nenvio not in (select nenvio from cargafurgonetas where fechaBaja is null) order By cpDestino desc");

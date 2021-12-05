@@ -4,7 +4,6 @@ import java.sql.SQLException;
 import java.util.List;
 
 import beans.CargaFurgonetas;
-import beans.Estados;
 import beans.Furgonetas;
 
 public interface FurgonetasDaoI {
